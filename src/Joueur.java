@@ -1,28 +1,51 @@
 enum Couleur {
-	ROUGE, BLEU
+    ROUGE,
+    BLEU,
 }
 
 public class Joueur {
-	private String nom;
-	private Integer pointsDeVie;
-	private Integer position;
-	private Couleur couleurPion;
-	
-	public Joueur(String nom, Couleur couleurPion) {
-		this.nom = nom;
-		this.pointsDeVie = 100; 
-		this.position = 0; 
-		this.couleurPion = couleurPion;
-	}
-	
-	public void avancer(int nbCases) {
-		position += nbCases;
-		System.out.println(nom + " avance de " + cases + " cases. Position actuelle : " + position);
-	}
-	
-	public Boolean estVivant() {
-		return pointsDeVie > 0;
-	}
-	
 
+    private String nom;
+    private Integer pointsDeVie;
+    private Integer positionPlateau;
+    private Couleur couleurPion;
+
+    public Joueur(String nom, Couleur couleurPion) {
+        this.nom = nom;
+        this.pointsDeVie = 5;
+        this.positionPlateau = 1;
+        this.couleurPion = couleurPion;
+    }
+
+    public void avancer(int nbCases) {
+        positionPlateau += nbCases;
+    }
+
+    public Boolean estVivant() {
+        return pointsDeVie > 0;
+    }
+
+    public void ajouterVie(int points) {
+        pointsDeVie += points;
+    }
+
+    public Integer getPositionPlateau() {
+        return positionPlateau;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public Integer getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    public Couleur getCouleurPion() {
+        return couleurPion;
+    }
+
+    public void setPositionPlateau(Integer positionPlateau) {
+        this.positionPlateau = positionPlateau;
+    }
 }

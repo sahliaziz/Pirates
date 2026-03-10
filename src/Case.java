@@ -1,4 +1,3 @@
-
 public abstract class Case {
 	private Integer numeroCase;
 	
@@ -11,5 +10,6 @@ public abstract class Case {
 	}
 	
 	protected abstract void declencherAction(Joueur joueur1, Joueur joueur2);
+	
 
 }
