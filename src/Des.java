@@ -1,7 +1,12 @@
 import java.util.Random;
 
 public class Des {
-	private Random random;
+
+    private Random random;
+
+    public Des() {
+        random = new Random();
+    }
 
     public int lancerDes() {
         int n1 = random.nextInt(6) + 1;
