@@ -10,6 +10,6 @@ public abstract class Case {
 		return numeroCase;
 	}
 	
-	public abstract void declencherAction(Joueur joueur);
+	protected abstract void declencherAction(Joueur joueur1, Joueur joueur2);
 
 }
