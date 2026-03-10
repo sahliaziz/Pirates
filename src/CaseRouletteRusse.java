@@ -1,9 +1,16 @@
 public class CaseRouletteRusse extends Case {
 
-    public CaseRouletteRusse(Integer numeroCase) {
+    private Des des;
+
+    public CaseRouletteRusse(Integer numeroCase, Des des) {
         super(numeroCase);
+        this.des = des;
     }
 
     @Override
-    protected void declencherAction(Joueur joueur1, Joueur joueur2) {}
+    public void declencherAction(Joueur joueur1, Joueur joueur2) {
+        int resultat = des.lancerDes();
+
+        joueur1.avancer(resultat - 6);
+    }
 }
