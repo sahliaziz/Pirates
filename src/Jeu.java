@@ -27,7 +27,7 @@ public class Jeu {
         boolean finPartie = false;
 
         while (!finPartie) {
-            int indiceJoueur = tour % 2;
+            int indiceJoueur = tour % nbJoueurs;
             Joueur joueurActuel = joueurs[indiceJoueur];
             Joueur joueurEnnemi = joueurs[1 - indiceJoueur];
 
