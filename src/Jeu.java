@@ -1,13 +1,13 @@
 public class Jeu {
 
     private Integer nbJoueurs;
-    private Affichage affichage;
+    private IAffichage affichage;
     private Plateau plateau;
     private Des des;
     private Joueur[] joueurs;
 
     public Jeu(
-        Affichage affichage,
+        IAffichage affichage,
         Plateau plateau,
         Des des,
         Joueur joueur1,
