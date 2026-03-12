@@ -4,7 +4,7 @@ public abstract class Case {
     protected String nomCase;
     protected Boolean estSpeciale;
 
-    public Case(Integer numeroCase) {
+    protected Case(Integer numeroCase) {
         this.numeroCase = numeroCase;
     }
 

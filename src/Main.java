@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
         Des des = new Des();
-        Plateau plateau = new Plateau(30, des);
+        Plateau plateau = new Plateau(30);
         IAffichage affichage = new Affichage();
 
         Joueur j1 = new Joueur("Jack Le Borgne", Couleur.ROUGE);

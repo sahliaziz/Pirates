@@ -64,10 +64,10 @@ public class Jeu {
     public Joueur getJoueurGagnant() {
         for (int i = 0; i < nbJoueurs; i++) {
             Joueur joueur = joueurs[i];
-            if (joueur.getPositionPlateau() == plateau.getNbCases()) {
+            if (joueur.getPositionPlateau().equals(plateau.getNbCases())) {
                 return joueur;
             }
-            if (!joueur.estVivant()) {
+            if (Boolean.FALSE.equals(joueur.estVivant())) {
                 return joueurs[1 - i];
             }
         }
@@ -77,8 +77,8 @@ public class Jeu {
     public Boolean verifierFinPartie() {
         for (Joueur joueur : joueurs) {
             if (
-                !joueur.estVivant() ||
-                joueur.getPositionPlateau() == plateau.getNbCases()
+                Boolean.FALSE.equals(joueur.estVivant()) ||
+                joueur.getPositionPlateau().equals(plateau.getNbCases())
             ) {
                 return true;
             }

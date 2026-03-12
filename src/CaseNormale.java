@@ -7,5 +7,7 @@ public class CaseNormale extends Case {
     }
 
     @Override
-    protected void declencherAction(Joueur joueur1, Joueur joueur2) {}
+    protected void declencherAction(Joueur joueur1, Joueur joueur2) {
+    	// Aucune action spécifique pour une case normale
+    }
 }
