@@ -19,7 +19,7 @@ public class Affichage implements IAffichage {
                 " | Vies restantes : " +
                 joueur.getPointsDeVie()
         );
-        System.out.println("-----------------------------------------");
+        System.out.println("----------------------------------------");
     }
 
     @Override
@@ -28,11 +28,22 @@ public class Affichage implements IAffichage {
             System.out.println(
                 "   -> Atterrit sur la case n°" + c.getNumeroCase()
             );
+            if (c.estSpeciale()) {
+                System.out.println("   [case spéciale] " + c.getNomCase());
+            }
         }
     }
 
     @Override
     public void afficherResultatDe(Des des) {
         System.out.println("Résultat des dés : " + des.getDernierResultat());
+    }
+
+    @Override
+    public void afficherFinPartie(Joueur joueurGagnant) {
+        System.out.println("========================================");
+        System.out.println("========== FIN DE LA PARTIE ==========");
+        System.out.println("Le joueur gagnant est : " + joueurGagnant.getNom());
+        System.out.println("========================================\n");
     }
 }

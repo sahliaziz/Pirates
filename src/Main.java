@@ -8,7 +8,7 @@ public class Main {
         Joueur j1 = new Joueur("Jack Le Borgne", Couleur.ROUGE);
         Joueur j2 = new Joueur("Bill Jambe De Bois", Couleur.BLEU);
 
-        Jeu jeu = new Jeu(2, affichage, plateau, des, j1, j2);
+        Jeu jeu = new Jeu(affichage, plateau, des, j1, j2);
         jeu.lancerJeu();
     }
 }

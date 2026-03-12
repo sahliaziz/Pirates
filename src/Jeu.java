@@ -7,14 +7,13 @@ public class Jeu {
     private Joueur[] joueurs;
 
     public Jeu(
-        Integer nbJoueurs,
         Affichage affichage,
         Plateau plateau,
         Des des,
         Joueur joueur1,
         Joueur joueur2
     ) {
-        this.nbJoueurs = nbJoueurs;
+        this.nbJoueurs = 2;
         this.affichage = affichage;
         this.plateau = plateau;
         this.des = des;
@@ -45,6 +44,8 @@ public class Jeu {
             finPartie = verifierFinPartie();
             tour++;
         }
+
+        affichage.afficherFinPartie(getJoueurGagnant());
     }
 
     public void deplacerJoueur(Joueur joueur) {
@@ -58,6 +59,19 @@ public class Jeu {
         }
 
         joueur.setPositionPlateau(positionArrivee);
+    }
+
+    public Joueur getJoueurGagnant() {
+        for (int i = 0; i < nbJoueurs; i++) {
+            Joueur joueur = joueurs[i];
+            if (joueur.getPositionPlateau() == plateau.getNbCases()) {
+                return joueur;
+            }
+            if (!joueur.estVivant()) {
+                return joueurs[1 - i];
+            }
+        }
+        return null;
     }
 
     public Boolean verifierFinPartie() {

@@ -12,5 +12,13 @@ public abstract class Case {
         return numeroCase;
     }
 
+    public Boolean estSpeciale() {
+        return estSpeciale;
+    }
+
+    public String getNomCase() {
+        return nomCase;
+    }
+
     protected abstract void declencherAction(Joueur joueur1, Joueur joueur2);
 }
