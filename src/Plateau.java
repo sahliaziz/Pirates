@@ -13,6 +13,8 @@ public class Plateau {
                 this.cases[i] = new CaseVolVie(numCase);
             } else if (numCase == 13 || numCase == 27) {
                 this.cases[i] = new CaseRouletteRusse(numCase);
+            } else if (numCase == 11 || numCase == 19) {
+                this.cases[i] = new CaseMine(numCase);
             } else {
                 this.cases[i] = new CaseNormale(numCase);
             }
