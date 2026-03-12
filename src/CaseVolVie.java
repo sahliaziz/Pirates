@@ -2,6 +2,8 @@ public class CaseVolVie extends Case {
 
     public CaseVolVie(Integer numeroCase) {
         super(numeroCase);
+        this.nomCase = "Case Vol Vie";
+        this.estSpeciale = true;
     }
 
     @Override

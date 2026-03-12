@@ -5,6 +5,8 @@ public class CaseRouletteRusse extends Case {
     public CaseRouletteRusse(Integer numeroCase, Des des) {
         super(numeroCase);
         this.des = des;
+        this.nomCase = "Case Roulette Russe";
+        this.estSpeciale = true;
     }
 
     @Override

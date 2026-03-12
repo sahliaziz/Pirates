@@ -1,7 +1,6 @@
 public class Jeu {
 
     private Integer nbJoueurs;
-    private Integer nbDes;
     private Affichage affichage;
     private Plateau plateau;
     private Des des;
@@ -9,7 +8,6 @@ public class Jeu {
 
     public Jeu(
         Integer nbJoueurs,
-        Integer nbDes,
         Affichage affichage,
         Plateau plateau,
         Des des,
@@ -17,23 +15,57 @@ public class Jeu {
         Joueur joueur2
     ) {
         this.nbJoueurs = nbJoueurs;
-        this.nbDes = nbDes;
         this.affichage = affichage;
         this.plateau = plateau;
         this.des = des;
         this.joueurs = new Joueur[] { joueur1, joueur2 };
     }
 
-    public void lancerJeu() {}
+    public void lancerJeu() {
+        affichage.afficherJeu(this);
+        int tour = 0;
+        boolean finPartie = false;
+
+        while (!finPartie) {
+            int indiceJoueur = tour % 2;
+            Joueur joueurActuel = joueurs[indiceJoueur];
+            Joueur joueurEnnemi = joueurs[1 - indiceJoueur];
+
+            deplacerJoueur(joueurActuel);
+            affichage.afficherResultatDe(des);
+
+            Case caseActuelle = plateau.getCase(
+                joueurActuel.getPositionPlateau()
+            );
+            affichage.afficherCase(caseActuelle);
+            caseActuelle.declencherAction(joueurActuel, joueurEnnemi);
+
+            affichage.afficherJoueur(joueurActuel);
+
+            finPartie = verifierFinPartie();
+            tour++;
+        }
+    }
 
     public void deplacerJoueur(Joueur joueur) {
         int resultat = des.lancerDes();
-        joueur.avancer(resultat);
+        int max = plateau.getNbCases();
+        int positionArrivee = joueur.getPositionPlateau() + resultat;
+
+        if (positionArrivee > max) {
+            int excedent = positionArrivee - max;
+            positionArrivee = max - excedent;
+        }
+
+        joueur.setPositionPlateau(positionArrivee);
     }
 
     public Boolean verifierFinPartie() {
         for (Joueur joueur : joueurs) {
-            if (!joueur.estVivant()) {
+            if (
+                !joueur.estVivant() ||
+                joueur.getPositionPlateau() == plateau.getNbCases()
+            ) {
                 return true;
             }
         }
