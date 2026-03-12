@@ -8,7 +8,7 @@ public class CaseVolVie extends Case {
 
     @Override
     public void declencherAction(Joueur joueur1, Joueur joueur2) {
-        joueur1.ajouterVie(1);
-        joueur2.ajouterVie(-1);
+        joueur1.modifierVie(1);
+        joueur2.modifierVie(-1);
     }
 }

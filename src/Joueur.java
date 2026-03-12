@@ -25,7 +25,7 @@ public class Joueur {
         return pointsDeVie > 0;
     }
 
-    public void ajouterVie(int points) {
+    public void modifierVie(int points) {
         pointsDeVie += points;
     }
 
