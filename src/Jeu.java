@@ -6,17 +6,13 @@ public class Jeu {
     private Des des;
     private Joueur[] joueurs;
 
-    public Jeu(
-        IAffichage affichage,
-        Plateau plateau,
-        Des des,
-        Joueur joueur1,
-        Joueur joueur2
-    ) {
+    public Jeu(IAffichage affichage) {
         this.nbJoueurs = 2;
         this.affichage = affichage;
-        this.plateau = plateau;
-        this.des = des;
+        this.plateau = new Plateau();
+        this.des = new Des();
+        Joueur joueur1 = new Joueur("Jack Le Borgne", Couleur.ROUGE);
+        Joueur joueur2 = new Joueur("Bill Jambe De Bois", Couleur.BLEU);
         this.joueurs = new Joueur[] { joueur1, joueur2 };
     }
 
@@ -64,7 +60,7 @@ public class Jeu {
     public Joueur getJoueurGagnant() {
         for (int i = 0; i < nbJoueurs; i++) {
             Joueur joueur = joueurs[i];
-            if (joueur.getPositionPlateau().equals(plateau.getNbCases())) {
+            if (joueur.getPositionPlateau() == plateau.getNbCases()) {
                 return joueur;
             }
             if (!joueur.estVivant()) {
@@ -78,7 +74,7 @@ public class Jeu {
         for (Joueur joueur : joueurs) {
             if (
                 !joueur.estVivant() ||
-                joueur.getPositionPlateau().equals(plateau.getNbCases())
+                joueur.getPositionPlateau() == plateau.getNbCases()
             ) {
                 return true;
             }
