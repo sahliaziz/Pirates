@@ -13,7 +13,7 @@ Chaque pirate commence avec 5 points de vie. Tomber sur certaines cases spécial
 | Case | Type | Effet |
 |------|------|-------|
 | 7, 21 | Vol de Vie | +1 PV au joueur actif, -1 PV à l'adversaire |
-| 11, 19 | Mine | -1 PV au joueur actif |
+| 11, 19 | Mine | -2 PV au joueur actif |
 | 13, 27 | Roulette Russe | Téléporte le joueur sur une case aléatoire (1-30) |
 
 ## Structure du projet
