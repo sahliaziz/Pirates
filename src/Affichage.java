@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class Affichage implements IAffichage {
+
+    private final Scanner scanner = new Scanner(System.in);
 
     @Override
     public void afficherJeu(Jeu jeu) {
@@ -36,6 +40,8 @@ public class Affichage implements IAffichage {
 
     @Override
     public void afficherResultatDe(Des des) {
+        System.out.print("\nAppuyez sur Entrée pour lancer les dés...");
+        scanner.nextLine();
         System.out.println("Résultat des dés : " + des.getDernierResultat());
     }
 
