@@ -1,6 +1,6 @@
 public class Plateau {
 
-    private Integer nbCases;
+    private Integer nbCases = 30;
     private Case[] cases;
 
     public Plateau(Integer nbCases) {

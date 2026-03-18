@@ -42,7 +42,7 @@ public class Affichage implements IAffichage {
     @Override
     public void afficherFinPartie(Joueur joueurGagnant) {
         System.out.println("========================================");
-        System.out.println("========== FIN DE LA PARTIE ==========");
+        System.out.println("=========== FIN DE LA PARTIE ===========");
         System.out.println("Le joueur gagnant est : " + joueurGagnant.getNom());
         System.out.println("========================================\n");
     }
