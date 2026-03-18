@@ -1,9 +1,9 @@
 public class Plateau {
 
-    private Integer nbCases = 30;
+    private int nbCases = 30;
     private Case[] cases;
 
-    public Plateau(Integer nbCases) {
+    public Plateau(int nbCases) {
         this.nbCases = nbCases;
         this.cases = new Case[nbCases];
         for (int i = 0; i < nbCases; i++) {
@@ -21,11 +21,11 @@ public class Plateau {
         }
     }
 
-    public Case getCase(Integer num) {
+    public Case getCase(int num) {
         return cases[num - 1];
     }
 
-    public Integer getNbCases() {
+    public int getNbCases() {
         return nbCases;
     }
 }

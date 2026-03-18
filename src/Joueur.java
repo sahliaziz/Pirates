@@ -6,8 +6,8 @@ enum Couleur {
 public class Joueur {
 
     private String nom;
-    private Integer pointsDeVie;
-    private Integer positionPlateau;
+    private int pointsDeVie;
+    private int positionPlateau;
     private Couleur couleurPion;
 
     public Joueur(String nom, Couleur couleurPion) {
@@ -21,7 +21,7 @@ public class Joueur {
         positionPlateau += nbCases;
     }
 
-    public Boolean estVivant() {
+    public boolean estVivant() {
         return pointsDeVie > 0;
     }
 
@@ -29,7 +29,7 @@ public class Joueur {
         pointsDeVie += points;
     }
 
-    public Integer getPositionPlateau() {
+    public int getPositionPlateau() {
         return positionPlateau;
     }
 
@@ -37,7 +37,7 @@ public class Joueur {
         return nom;
     }
 
-    public Integer getPointsDeVie() {
+    public int getPointsDeVie() {
         return pointsDeVie;
     }
 
@@ -45,7 +45,7 @@ public class Joueur {
         return couleurPion;
     }
 
-    public void setPositionPlateau(Integer positionPlateau) {
+    public void setPositionPlateau(int positionPlateau) {
         this.positionPlateau = positionPlateau;
     }
 }

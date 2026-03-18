@@ -1,6 +1,6 @@
 public class Jeu {
 
-    private Integer nbJoueurs;
+    private int nbJoueurs;
     private IAffichage affichage;
     private Plateau plateau;
     private Des des;
@@ -25,7 +25,7 @@ public class Jeu {
         int tour = 0;
         boolean finPartie = false;
 
-        while (!finPartie) {
+        do {
             int indiceJoueur = tour % nbJoueurs;
             Joueur joueurActuel = joueurs[indiceJoueur];
             Joueur joueurEnnemi = joueurs[1 - indiceJoueur];
@@ -43,7 +43,7 @@ public class Jeu {
 
             finPartie = verifierFinPartie();
             tour++;
-        }
+        } while (!finPartie);
 
         affichage.afficherFinPartie(getJoueurGagnant());
     }
@@ -67,17 +67,17 @@ public class Jeu {
             if (joueur.getPositionPlateau().equals(plateau.getNbCases())) {
                 return joueur;
             }
-            if (Boolean.FALSE.equals(joueur.estVivant())) {
+            if (!joueur.estVivant()) {
                 return joueurs[1 - i];
             }
         }
         return null;
     }
 
-    public Boolean verifierFinPartie() {
+    public boolean verifierFinPartie() {
         for (Joueur joueur : joueurs) {
             if (
-                Boolean.FALSE.equals(joueur.estVivant()) ||
+                !joueur.estVivant() ||
                 joueur.getPositionPlateau().equals(plateau.getNbCases())
             ) {
                 return true;

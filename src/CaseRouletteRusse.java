@@ -4,7 +4,7 @@ public class CaseRouletteRusse extends Case {
 
     private Random random;
 
-    public CaseRouletteRusse(Integer numeroCase) {
+    public CaseRouletteRusse(int numeroCase) {
         super(numeroCase);
         this.random = new Random();
         this.nomCase = "Case Roulette Russe";

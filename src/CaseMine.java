@@ -1,6 +1,6 @@
 public class CaseMine extends Case {
 
-    public CaseMine(Integer numeroCase) {
+    public CaseMine(int numeroCase) {
         super(numeroCase);
         this.nomCase = "Case Mine";
         this.estSpeciale = true;

@@ -1,18 +1,18 @@
 public abstract class Case {
 
-    protected Integer numeroCase;
+    protected int numeroCase;
     protected String nomCase;
-    protected Boolean estSpeciale;
+    protected boolean estSpeciale;
 
-    protected Case(Integer numeroCase) {
+    protected Case(int numeroCase) {
         this.numeroCase = numeroCase;
     }
 
-    public Integer getNumeroCase() {
+    public int getNumeroCase() {
         return numeroCase;
     }
 
-    public Boolean estSpeciale() {
+    public boolean estSpeciale() {
         return estSpeciale;
     }
 
