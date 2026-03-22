@@ -34,6 +34,7 @@ public class Affichage implements IAffichage {
             );
             if (c.estSpeciale()) {
                 System.out.println("   [case spéciale] " + c.getNomCase());
+                System.out.println("   [action] " + c.getDescriptionCase());
             }
         }
     }

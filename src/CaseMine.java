@@ -3,6 +3,7 @@ public class CaseMine extends Case {
     public CaseMine(int numeroCase) {
         super(numeroCase);
         this.nomCase = "Case Mine";
+        this.descriptionCase = "Vous perdez 2 points de vie.";
         this.estSpeciale = true;
     }
 

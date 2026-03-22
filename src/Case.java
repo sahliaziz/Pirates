@@ -2,6 +2,7 @@ public abstract class Case {
 
     protected int numeroCase;
     protected String nomCase;
+    protected String descriptionCase;
     protected boolean estSpeciale;
 
     protected Case(int numeroCase) {
@@ -18,6 +19,10 @@ public abstract class Case {
 
     public String getNomCase() {
         return nomCase;
+    }
+
+    public String getDescriptionCase() {
+        return descriptionCase;
     }
 
     protected void declencherAction(Joueur joueur1, Joueur joueur2) {

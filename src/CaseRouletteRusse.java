@@ -8,6 +8,8 @@ public class CaseRouletteRusse extends Case {
         super(numeroCase);
         this.random = new Random();
         this.nomCase = "Case Roulette Russe";
+        this.descriptionCase =
+            "Vous êtes transporté à une case aléatoire du plateau.";
         this.estSpeciale = true;
     }
 
