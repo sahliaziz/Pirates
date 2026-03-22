@@ -40,6 +40,12 @@ javac src/*.java -d bin
 java -cp bin Main
 ```
 
+## Rapport
+Vous pouvez accéder au rapport directement sur `rapport.pdf`, ou le compiler à partir du fichier source avec :
+```bash
+typst compile rapport.typ
+```
+
 ## Exigences techniques
 
 - Séparation modèle / affichage via l'interface `IAffichage`
