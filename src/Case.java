@@ -25,7 +25,5 @@ public abstract class Case {
         return descriptionCase;
     }
 
-    protected void declencherAction(Joueur joueur1, Joueur joueur2) {
-        // Comportement par défaut : aucune action
-    }
+    protected abstract void declencherAction(Joueur joueur1, Joueur joueur2);
 }
