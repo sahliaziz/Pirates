@@ -1,0 +1,54 @@
+<svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" style="background-color: white;">
+  <defs>
+    <marker id="arrow-black" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 Z" fill="black" stroke="none" />
+  </marker>
+  </defs>
+
+  <text x="340" y="28" text-anchor="middle" font-family="Liberation Sans" font-size="16" font-weight="bold" fill="black">Case Vol de Vie</text>
+
+  <g font-family="Liberation Sans" font-size="14" font-weight="bold">
+    <rect x="40" y="46" width="100" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="90" y="71" text-anchor="middle" fill="black" text-decoration="underline">:Jeu</text>
+    
+    <rect x="195" y="46" width="120" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="255" y="71" text-anchor="middle" fill="black" text-decoration="underline">:CaseVolVie</text>
+    
+    <rect x="380" y="46" width="120" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="440" y="71" text-anchor="middle" fill="black" text-decoration="underline">joueurActuel</text>
+    
+    <rect x="545" y="46" width="120" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="605" y="71" text-anchor="middle" fill="black" text-decoration="underline">joueurEnnemi</text>
+  </g>
+
+  <g stroke="#aaaaaa" stroke-width="1" stroke-dasharray="5 5">
+    <line x1="90" y1="86" x2="90" y2="490" />
+    <line x1="255" y1="86" x2="255" y2="490" />
+    <line x1="440" y1="86" x2="440" y2="490" />
+    <line x1="605" y1="86" x2="605" y2="490" />
+  </g>
+
+  <g fill="white" stroke="black" stroke-width="1.5">
+    <rect x="84" y="150" width="12" height="240" />
+    <rect x="249" y="150" width="12" height="240" />
+    <rect x="434" y="220" width="12" height="40" />
+    <rect x="599" y="300" width="12" height="40" />
+  </g>
+
+  <g font-family="Liberation Sans" font-size="12" font-weight="500" fill="black">
+    <line x1="96" y1="150" x2="248" y2="150" stroke="black" stroke-width="1.2" marker-end="url(#arrow-black)"/>
+    <text x="172" y="143" text-anchor="middle">declencherAction(joueurActuel, joueurEnnemi)</text>
+
+    <line x1="261" y1="220" x2="433" y2="220" stroke="black" stroke-width="1.2" marker-end="url(#arrow-black)"/>
+    <text x="347" y="213" text-anchor="middle">modifierVie(+1)</text>
+
+    <line x1="433" y1="260" x2="261" y2="260" stroke="black" stroke-width="1" stroke-dasharray="4 2" marker-end="url(#arrow-black)"/>
+
+    <line x1="261" y1="300" x2="598" y2="300" stroke="black" stroke-width="1.2" marker-end="url(#arrow-black)"/>
+    <text x="430" y="293" text-anchor="middle">modifierVie(-1)</text>
+
+    <line x1="598" y1="340" x2="261" y2="340" stroke="black" stroke-width="1" stroke-dasharray="4 2" marker-end="url(#arrow-black)"/>
+
+    <line x1="249" y1="390" x2="96" y2="390" stroke="black" stroke-width="1" stroke-dasharray="4 2" marker-end="url(#arrow-black)"/>
+  </g>
+</svg>
